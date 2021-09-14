@@ -1,0 +1,601 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>24/7 Islamic Support</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+  <link rel='stylesheet' href='{% static "css/index.css" %}'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="{% static 'image/logo1.png' %}">
+  <!-- extra -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- extra -->
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}?{% now "U" %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}?{% now "U" %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}?{% now "U" %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}?{% now "U" %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}?{% now "U" %}" rel="stylesheet">
+
+  <!-- =============================================================================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+	<div class="navbar">
+		<div class="logo">
+			<img src='{% static "image/Logo.png" %}' style="width: 230px; margin-top: 10px;" />
+		</div>
+		<div class="search">
+		</div>
+		<div class="navlinks">
+          			<h6><a href="{% url "Home" %}">Home</a>  </h6><h6><a href="{% url "home" %}">Forum</a>  </h6> <h6 style="width: 30%;"><a href="{% url "create" %}">Ask a Question</a></h6> <h6><a href="{% url "quran" %}">Quran</a></h6> <h6><a href="{% url "hadith" %}">Hadith</a></h6> <h6><a href="{% url "sunnah" %}">Sunnah</a></h6>
+		</div>
+		<div class="login" style="font-size: 15px;">
+			{% if request.user.is_authenticated %}
+			<p><a href="{% url "logout" %}"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></p>
+			{% else %}
+			<p><a href="{% url "login" %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in / Register</a></p>
+			{%endif %}
+		</div>
+	</div>
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Welcome to 24/7 Islamic Support Center</h1>
+      <h2>We provide Knowledge and Information about Islam</h2>
+      <a href="{% url "create" %}" class="btn-get-started scrollto">Ask a Question</a>
+    </div>
+  </section><!-- #hero -->
+
+
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+<!--    <section id="about" class="about">-->
+<!--      <div class="container">-->
+
+<!--        <div class="section-title">-->
+<!--          <h2>About Us</h2>-->
+<!--        </div>-->
+
+<!--        <div class="row">-->
+<!--          <div class="col-lg-6 order-1 order-lg-2">-->
+<!--            <img src="{% static 'assets/img/about-img.jpg' %}" class="img-fluid" alt="">-->
+<!--          </div>-->
+<!--          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">-->
+<!--            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>-->
+<!--            <p class="font-italic">-->
+<!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
+<!--              magna aliqua.-->
+<!--            </p>-->
+<!--            <ul>-->
+<!--              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>-->
+<!--              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>-->
+<!--              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>-->
+<!--            </ul>-->
+<!--            <p>-->
+<!--              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate-->
+<!--              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in-->
+<!--              culpa qui officia deserunt mollit anim id est laborum-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End About Us Section &ndash;&gt;-->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+<!--          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-computer"></i></div>
+            <h4 class="title"><a href="">Latest Islamic News</a></h4>
+            <p class="description">We cover world Islamic news from OIC conference to International Quran Recitation.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+            <h4 class="title"><a href="">You can ask a Question</a></h4>
+            <p class="description">We are a open source platform where anyone can ask questions and get the answers.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-earth"></i></div>
+            <h4 class="title"><a href="">Video Consultancy</a></h4>
+            <p class="description">Paid users can seek help with our Alems. During Ramadan we have our Live telicast where we answers public questions.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-image"></i></div>
+            <h4 class="title"><a href="">Authentic Quranic Verses</a></h4>
+            <p class="description">We provide Authentic and Legitimate Quranic Verses</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-settings"></i></div>
+            <h4 class="title"><a href="">Authentic Hadith</a></h4>
+            <p class="description">We provide Authentic and Legitimate Hadith and Masla Masayel</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-tasks-alt"></i></div>
+            <h4 class="title"><a href="">Salat Notification</a></h4>
+            <p class="description">We provide 5 time notication during Salat</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+    <section class="call-to-action">
+      <div class="container">
+
+        <div class="text-center">
+          <h3></h3>
+          <p> </p>
+          <a class="cta-btn" href="#">Sign Up</a>
+        </div>
+
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    <!-- ======= Our Portfolio Section ======= -->
+<!--    <section id="portfolio" class="portfolio">-->
+<!--      <div class="container">-->
+
+<!--        <div class="section-title">-->
+<!--          <h2>Our Portfolio</h2>-->
+<!--        </div>-->
+
+<!--        <div class="row">-->
+<!--          <div class="col-lg-12">-->
+<!--            <ul id="portfolio-flters">-->
+<!--              <li data-filter="*" class="filter-active">All</li>-->
+<!--              <li data-filter=".filter-app">App</li>-->
+<!--              <li data-filter=".filter-card">Card</li>-->
+<!--              <li data-filter=".filter-web">Web</li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="row portfolio-container">-->
+
+<!--          <div class="col-lg-4 col-md-6 filter-app">-->
+<!--            <div class="portfolio-item">-->
+<!--              <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">-->
+<!--              <div class="portfolio-info">-->
+<!--                <h3><a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gall="portfolioGallery" class="venobox" title="App 1">App 1</a></h3>-->
+<!--                <div>-->
+<!--                  <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="icofont-eye"></i></a>-->
+<!--                  <a href="{% static 'portfolio-details.html' %}" title="Details"><i class="icofont-plus"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 filter-web">-->
+<!--            <div class="portfolio-item">-->
+<!--              <img src="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" class="img-fluid" alt="">-->
+<!--              <div class="portfolio-info">-->
+<!--                <h3><a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 3">Web 3</a></h3>-->
+<!--                <div>-->
+<!--                  <a href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>-->
+<!--                  <a href="{% static 'portfolio-details.html' %}" title="Details"><i class="icofont-plus"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 filter-app">-->
+<!--            <div class="portfolio-item">-->
+<!--              <img src="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" class="img-fluid" alt="">-->
+<!--              <div class="portfolio-info">-->
+<!--                <h3><a href="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" data-gall="portfolioGallery" class="venobox" title="App 2">App 2</a></h3>-->
+<!--                <div>-->
+<!--                  <a href="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-eye"></i></a>-->
+<!--                  <a href="{% static 'portfolio-details.html' %}" title="Details"><i class="icofont-plus"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 filter-card">-->
+<!--            <div class="portfolio-item">-->
+<!--              <img src="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" class="img-fluid" alt="">-->
+<!--              <div class="portfolio-info">-->
+<!--                <h3><a href="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 2">Card 2</a></h3>-->
+<!--                <div>-->
+<!--                  <a href="{% static 'assets/img/portfolio/portfolio-4.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-eye"></i></a>-->
+<!--                  <a href="{% static 'portfolio-details.html' %}" title="Details"><i class="icofont-plus"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 filter-web">-->
+<!--            <div class="portfolio-item">-->
+<!--              <img src="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" class="img-fluid" alt="">-->
+<!--              <div class="portfolio-info">-->
+<!--                <h3><a href="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 2">Web 2</a></h3>-->
+<!--                <div>-->
+<!--                  <a href="{% static 'assets/img/portfolio/portfolio-5.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-eye"></i></a>-->
+<!--                  <a href="{% static 'portfolio-details.html' %}" title="Details"><i class="icofont-plus"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 filter-app">-->
+<!--            <div class="portfolio-item">-->
+<!--              <img src="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" class="img-fluid" alt="">-->
+<!--              <div class="portfolio-info">-->
+<!--                <h3><a href="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" data-gall="portfolioGallery" class="venobox" title="App 3">App 3</a></h3>-->
+<!--                <div>-->
+<!--                  <a href="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="icofont-eye"></i></a>-->
+<!--                  <a href="{% static 'portfolio-details.html' %}" title="Details"><i class="icofont-plus"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 filter-card">-->
+<!--            <div class="portfolio-item">-->
+<!--              <img src="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt="">-->
+<!--              <div class="portfolio-info">-->
+<!--                <h3><a href="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 1">Card 1</a></h3>-->
+<!--                <div>-->
+<!--                  <a href="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="icofont-eye"></i></a>-->
+<!--                  <a href="{% static 'portfolio-details.html' %}" title="Details"><i class="icofont-plus"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 filter-card">-->
+<!--            <div class="portfolio-item">-->
+<!--              <img src="{% static 'assets/img/portfolio/portfolio-8.jpg' %}" class="img-fluid" alt="">-->
+<!--              <div class="portfolio-info">-->
+<!--                <h3><a href="{% static 'assets/img/portfolio/portfolio-8.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 3">Card 3</a></h3>-->
+<!--                <a href="{% static 'assets/img/portfolio/portfolio-8.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-plus"></i></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 filter-web">-->
+<!--            <div class="portfolio-item">-->
+<!--              <img src="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt="">-->
+<!--              <div class="portfolio-info">-->
+<!--                <h3><a href="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 1">Web 1</a></h3>-->
+<!--                <div>-->
+<!--                  <a href="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 1"><i class="icofont-eye"></i></a>-->
+<!--                  <a href="{% static 'portfolio-details.html' %}" title="Details"><i class="icofont-plus"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Our Portfolio Section &ndash;&gt;-->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <ul class="faq-list">
+
+          <li>
+            <a data-toggle="collapse" class="" href="#faq1">1. What is the difference between the words “Islam,” “Islamic,” “Muslim,” and “Arab”? <i class="icofont-simple-up"></i></a>
+            <div id="faq1" class="collapse show" data-parent=".faq-list">
+              <p>
+                Islam is the name of a religion, as Christianity and Judaism are names of religions. The Arabic word “Islam” is based on the root “slm,” which means peace or surrender to God. Combining both translations results in the combined meaning “the state of peace through following God’s guidance.”
+
+Islamic is an adjective that modifies a non-human noun, as for example, “Islamic art,” “Islamic architecture,” “Islamic beliefs,” etc. This term should not be used to refer to a person.
+
+A follower of Islam is called a Muslim, or “one who is in a state of peace by following God’s guidance.”
+
+While the term Arab has been used in the past to refer to members of a Semitic ethnic group from the Arabian Peninsula, today the word “Arab” refers to people from Arabic-speaking countries, most of which are in the Middle East and North Africa. The term Arabian was historically used to describe an inhabitant of the Arabian Peninsula. Today “Arabian” is used as an adjective to describe a non-human noun (e.g., Arabian coffee); it should not be used to refer to people.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">2. What does Islam teach? <i class="icofont-simple-up"></i></a>
+            <div id="faq2" class="collapse" data-parent=".faq-list">
+              <p>
+                Islam’s primary message, as understood by the overwhelming majority of Muslims, is the continuation of the Abrahamic monotheistic tradition’s belief in one God. The three major dimensions of Islam include beliefs, ritual practices, and the effort to improve one’s character and actions. There are six major beliefs in Islam and five central practices that are referred to as the Five Pillars.
+
+The last dimension of Islam focuses on the cultivation of excellent moral character to better oneself and the world around oneself. It teaches a set of values that promote life, liberty, equality and justice. Some of these values include:
+
+Respect for the earth and all creatures
+Care and compassion for those less fortunate
+The importance of seeking knowledge
+Honesty and truthfulness in word and deed
+Striving continuously to improve oneself and the world
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">3. What are the major beliefs of Muslims? <i class="icofont-simple-up"></i></a>
+            <div id="faq3" class="collapse" data-parent=".faq-list">
+              <p>
+                The six major beliefs in Islam, as understood by the majority of Sunni Muslims, are:
+
+belief in God;
+belief in angels;
+belief in God’s prophets/messengers;
+belief in God’s revelations in the form of holy scriptures given to the messengers;
+belief in an afterlife that follows the Day of Judgment on which people will be held accountable for their actions and compensated accordingly in the afterlife; and
+belief in God’s divine will and His knowledge of what happens in the world.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed">4. What does Islam say about Satan? <i class="icofont-simple-up"></i></a>
+            <div id="faq4" class="collapse" data-parent=".faq-list">
+              <p>
+                Satan (Shaytan in Arabic) is believed to be a third type of creation, in addition to humans and angels, known as a “jinn.” Humans are said to have been made from clay, angels from light, and jinn from fire. While the Qur’an teaches that some jinn are good and submit to God, it states that others, such as Iblis or Shaytan (Satan), try to tempt people to do evil, similar to the belief about Satan in traditional Christian theology.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">5. How do the stories of the prophets in Islam compare with those in Christianity and Judaism? <i class="icofont-simple-up"></i></a>
+            <div id="faq5" class="collapse" data-parent=".faq-list">
+              <p>
+                That depends on which prophet we are talking about. In many cases, the stories of the prophets in the Qur’an are similar to the stories in the Bible. Some examples include:
+
+the story of Noah and his ark;
+the story of Abraham and Sarah and the birth of their son Isaac, who is also considered a prophet in the Qur’an;
+the story of Jacob and his twelve sons, including Joseph, who is also considered a prophet in the Qur’an; and
+the most oft-mentioned prophet in the Qur’an, Moses, and the story of his mission in Egypt to rescue his people.
+Some of the major differences between the biblical account of some of these prophets and the Qur’an stem from the fact that the Qur’an holds that all prophets were immune from major sins. The stories of the Prophet Jesus are close to the Bible in their descriptions of his virginal birth and miracles but differ sharply in their account of the divinity of Jesus and his crucifixion; the Qur’an states that Jesus was only a man, not divine, and that before the crucifixion Jesus was taken up to heaven and replaced by a person who looked like him.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq6" class="collapsed">6. Why can’t you display images of the Prophet Muhammad? <i class="icofont-simple-up"></i></a>
+            <div id="faq6" class="collapse" data-parent=".faq-list">
+              <p>
+                The general consensus among scholars is that physical representations of the Prophet Muhammad are discouraged on the grounds that, since the prophets are exemplars, they should not be presented in a manner that either is disrespectful or might lead to idolatry. However, one can find representations of Muhammad and other prophets in different periods of Islamic history, mainly in the form of manuscript illustrations known as Persian miniatures, in which Muhammad’s face is often obscured by light.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+
+
+
+
+
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Scholars</h2>
+          <p>We have created this Platform to get into touch with our Muslim Community. We are honoured to have Some of the Well known Scholars with us.  </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static 'assets/img/team/team-1.jpg' %}" alt="">
+              <h4>Mufti Menk</h4>
+              <span>International Islamic Speaker</span>
+              <p>
+                South Africa.
+              </p>
+              <p>
+                Lecturer, University of Cairo
+              </p>
+              <div class="social">
+                <a href=""><i class="icofont-twitter"></i></a>
+                <a href=""><i class="icofont-facebook"></i></a>
+                <a href=""><i class="icofont-instagram"></i></a>
+                <a href=""><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static 'assets/img/team/team-2.jpg' %}" alt="">
+              <h4>Khandakar Abdullah Jahangir</h4>
+              <span>Islamic speaker & Specialist in Sahih Al Bukharih</span>
+              <p>
+                Bangladesh.
+              </p>
+              <p>
+                Ex-professor, Kustia Islamic University.
+              </p>
+              <div class="social">
+                <a href=""><i class="icofont-twitter"></i></a>
+                <a href=""><i class="icofont-facebook"></i></a>
+                <a href=""><i class="icofont-instagram"></i></a>
+                <a href=""><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="{% static 'assets/img/team/team-3.jpg' %}" alt="">
+              <h4>Mizanur Rahman Azhari</h4>
+              <span>Islamic Speaker & Specialist in Quranic Science</span>
+              <p>
+                Malyasia.
+              </p>
+              <p>
+                Researcher, Quranic Science.
+              </p>
+              <div class="social">
+                <a href=""><i class="icofont-twitter"></i></a>
+                <a href=""><i class="icofont-facebook"></i></a>
+                <a href=""><i class="icofont-instagram"></i></a>
+                <a href=""><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Every one can ask Question Through our system. If you have any query about our work, please contact us!</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-about">
+              <h3>Islamic Support</h3>
+              <p>A web platform to Gather Knowledge</p>
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <div>
+                <i class="icofont-google-map"></i>
+                <p>007 NSU Street<br>B/A Residencial Area, Dhaka</p>
+              </div>
+
+              <div>
+                <i class="icofont-envelope"></i>
+                <p>IslamicSupport.com</p>
+              </div>
+
+              <div>
+                <i class="icofont-phone"></i>
+                <p>+017# ### ####</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+
+    <!-- ======= Map Section ======= -->
+    <section class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2108.5786218267044!2d90.42469389115374!3d23.814906675522376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a8093%3A0xd660a4f50365294a!2sNorth%20South%20University!5e0!3m2!1sen!2sbg!4v1606236760338!5m2!1sen!2sbg" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section><!-- End Map Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Islamic Support</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!---->
+        <!---->
+        <!---->
+        Designed by Team Islamic Support
+      </div>
+    </div>
+  </footer><!-- End #footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

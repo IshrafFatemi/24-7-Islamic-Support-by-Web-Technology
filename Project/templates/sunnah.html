@@ -1,0 +1,251 @@
+{% load static %}
+<!--DOCTYPE html-->
+<html>
+<head>
+  <title>24/7 Islamic Support</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+
+<link rel='stylesheet' href='{% static "css/index.css" %}'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="{% static 'image/logo1.png' %}">
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- extra -->
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}?{% now "U" %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}?{% now "U" %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}?{% now "U" %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}?{% now "U" %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}?{% now "U" %}" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="logo">
+			<img src='{% static "image/Logo.png" %}' style="width: 230px; margin-top: 10px;" />
+		</div>
+		<div class="search">
+		</div>
+		<div class="navlinks">
+          			<h6><a href="{% url "Home" %}">Home</a>  </h6><h6><a href="{% url "home" %}">Forum</a>  </h6> <h6 style="width: 30%;"><a href="{% url "create" %}">Ask a Question</a></h6> <h6><a href="{% url "quran" %}">Quran</a></h6> <h6><a href="{% url "hadith" %}">Hadith</a></h6> <h6><a href="{% url "sunnah" %}">Sunnah</a></h6>
+		</div>
+		<div class="login" style="font-size: 15px;">
+			{% if request.user.is_authenticated %}
+			<p><a href="{% url "logout" %}"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></p>
+			{% else %}
+			<p><a href="{% url "login" %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in / Register</a></p>
+			{%endif %}
+		</div>
+	</div>
+<br>
+<br>
+<br>
+
+
+
+      <img src="{% static 'assets/img/sunnah-background.png' %}" class="img-fluid rounded mx-auto d-block" >
+<br>
+<br>
+<br>
+
+<div class="container">
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+       Wearing Shoes
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+          <p>If you want to wear your shoes, start with the right foot and if you want to take it off, start with the left.</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">Bukhari: 168</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+        When meeting People
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+         <p> Give Salam/Tasleem (Salutation/Greet) As-Salamu Alaykum</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">[Muslim: 2626]</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+       When meeting People
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+         <p> Lengthen the greeting/Salam “As-salaamu Alaykum wa rahmatullaahi wa barakaatuh (peace and mercy and blessings of Allah upon you)”</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">[Bukhari: 12, 28]</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+       When meeting People
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+          <p>Smiling / Meeting fellow brother(s) with a cheerful face.</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">[Tirmidhi: 2689]</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+       When meeting People
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+          <p>Shake hands of each other.</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">[Abu Dawoud: 5212]</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+       Wearing Shoes
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+          <p>If you want to wear your shoes, start with the right foot and if you want to take it off, start with the left.</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">Bukhari: 168</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+       Wearing Shoes
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+          <p>If you want to wear your shoes, start with the right foot and if you want to take it off, start with the left.</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">Bukhari: 168</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+       Wearing Shoes
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+          <p>If you want to wear your shoes, start with the right foot and if you want to take it off, start with the left.</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">Bukhari: 168</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+       Wearing Shoes
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+          <p>If you want to wear your shoes, start with the right foot and if you want to take it off, start with the left.</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">Bukhari: 168</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+  <div class="row-10">
+    <div class="card">
+      <div class="card-header">
+       Wearing Shoes
+      </div>
+      <div class="card-body">
+       <blockquote class="blockquote mb-0">
+          <p>If you want to wear your shoes, start with the right foot and if you want to take it off, start with the left.</p>
+       <footer class="blockquote-footer">Hadith References: <cite title="Source Title">Bukhari: 168</cite></footer>
+       </blockquote>
+      </div>
+    </div>
+  </div><br><br>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+
+</body>
+</html>

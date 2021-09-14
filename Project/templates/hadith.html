@@ -1,0 +1,136 @@
+{% load static %}
+<!--DOCTYPE html-->
+<html>
+<head>
+  <title>24/7 Islamic Support</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+<link rel='stylesheet' href='{% static "css/index.css" %}'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="{% static 'image/logo1.png' %}">
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- extra -->
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}?{% now "U" %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}?{% now "U" %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}?{% now "U" %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}?{% now "U" %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}?{% now "U" %}" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="logo">
+			<img src='{% static "image/Logo.png" %}' style="width: 230px; margin-top: 10px;" />
+		</div>
+		<div class="search">
+		</div>
+		<div class="navlinks">
+          			<h6><a href="{% url "Home" %}">Home</a>  </h6><h6><a href="{% url "home" %}">Forum</a>  </h6> <h6 style="width: 30%;"><a href="{% url "create" %}">Ask a Question</a></h6> <h6><a href="{% url "quran" %}">Quran</a></h6> <h6><a href="{% url "hadith" %}">Hadith</a></h6> <h6><a href="{% url "sunnah" %}">Sunnah</a></h6>
+		</div>
+		<div class="login" style="font-size: 15px;">
+			{% if request.user.is_authenticated %}
+			<p><a href="{% url "logout" %}"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></p>
+			{% else %}
+			<p><a href="{% url "login" %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in / Register</a></p>
+			{%endif %}
+		</div>
+	</div>
+<br>
+<br>
+<br>
+
+
+
+      <img src="{% static 'assets/img/hadith-background.png' %}" class="img-fluid rounded mx-auto d-block" >
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row hidden-md-up">
+        <div class="col-md-4">
+          <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Sahih al-Bukhari</h5>
+        <p class="card-text">Ṣaḥīḥ al-Bukhārī is one of the Kutub al-Sittah (six major hadith collections) of Sunni Islam, compiled by Persian scholar Muhammad al-Bukhari</p>
+        <a href="#" class="btn btn-primary">Hadith Collections</a>
+      </div>
+    </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Sahih Muslim</h5>
+        <p class="card-text">, Ṣaḥīḥ Muslim; full title: Al-Musnadu Al-Sahihu bi Naklil Adli) is one of the Kutub al-Sittah (six major hadith collections) in Sunni Islam</p>
+        <a href="#" class="btn btn-primary">Hadith Collections</a>
+      </div>
+    </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Sunan Abu Dawood</h5>
+        <p class="card-text">Sunan Abī Dāwūd) is one of the Kutub al-Sittah (six major hadith collections), collected by Abu Dawood</p>
+        <a href="#" class="btn btn-primary">Hadith Collections</a>
+      </div>
+    </div>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Sunan al-Tirmidhi</h5>
+        <p class="card-text">Sunan at-Tirmidhi, is one of "the six books" (Kutub al-Sittah - the six major hadith collections). It was collected by Al-Tirmidhi</p>
+        <a href="#" class="btn btn-primary">Hadith Collections</a>
+      </div>
+    </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Sunan al-Nasa'i</h5>
+        <p class="card-text">Sunan an-Nasa'i (Arabic: سنن النسائي‎), is one of the Kutub al-Sittah (six major hadiths), and was collected by Al-Nasa'i (214 – 303 AH; c. 829 – 915 CE)</p>
+        <a href="#" class="btn btn-primary">Hadith Collections</a>
+      </div>
+    </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Sunan ibn Majah</h5>
+        <p class="card-text">Sunan Ibn Mājah (Arabic: سُنن ابن ماجه‎) is one of the six major Sunni hadith collections (Kutub al-Sittah). The Sunan was authored by Ibn Mājah</p>
+        <a href="#" class="btn btn-primary">Hadith Collections</a>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<br>
+<br>
+
+
+
+
+</body>
+</html>

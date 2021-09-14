@@ -1,0 +1,163 @@
+{% load static %}
+<!--DOCTYPE html-->
+<html>
+<head>
+  <title>24/7 Islamic Support</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+
+<link rel='stylesheet' href='{% static "css/question.css" %}'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="{% static 'image/logo1.png' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+  <body style="background-color: #f2f2f2">
+	<div class="navbar">
+		<div class="logo">
+			<img src='{% static "image/Logo.png" %}' style="width: 230px; margin-top: 10px;" />
+		</div>
+		<div class="search">
+		</div>
+		<div class="navlinks">
+          			<h6><a href="{% url "Home" %}">Home</a>  </h6><h6><a href="{% url "home" %}">Forum</a>  </h6> <h6 style="width: 30%;"><a href="{% url "create" %}">Ask a Question</a></h6> <h6><a href="{% url "quran" %}">Quran</a></h6> <h6><a href="{% url "hadith" %}">Hadith</a></h6> <h6><a href="{% url "sunnah" %}">Sunnah</a></h6>
+		</div>
+		<div class="login" style="font-size: 15px;">
+			{% if request.user.is_authenticated %}
+			<p><a href="{% url "logout" %}"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></p>
+			{% else %}
+			<p><a href="{% url "login" %}"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in / Register</a></p>
+			{%endif %}
+		</div>
+	</div>
+
+
+
+    <br><br><br>
+
+     <h1 class="text-center">Suratul Fatiha</h1>
+
+     <br><br>
+
+
+    <div class="container">
+
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Arabic</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">English</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Bangla</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+    بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ
+
+<hr>
+
+الْحَمْدُ للّهِ رَبِّ الْعَالَمِينَ
+
+<hr>
+
+الرَّحْمـنِ الرَّحِيمِ
+<hr>
+
+مَالِكِ يَوْمِ الدِّينِ
+
+<hr>
+
+إِيَّاكَ نَعْبُدُ وإِيَّاكَ نَسْتَعِينُ
+<hr>
+
+اهدِنَــــا الصِّرَاطَ المُستَقِيمَ
+
+<hr>
+صِرَاطَ الَّذِينَ أَنعَمتَ عَلَيهِمْ غَيرِ المَغضُوبِ عَلَيهِمْ وَلاَ الضَّالِّينَ
+
+
+
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+  "In The Name of Allah, The Beneficent, The Merciful."  
+
+<hr>
+
+"(All) praise is (only) Allah's, the Lord of the Worlds."
+
+<hr>
+ "The Beneficent, The Merciful."
+
+<hr>
+
+ "Master of the Day of Judgement."
+
+
+<hr>
+
+"Thee (alone) do we worship and of Thee (only) do we seek help."
+
+<hr>
+"Guide us (O' Lord) on the Straight Path."
+
+<hr>
+
+"The path of those upon whom Thou hast bestowed Thy bounties, not (the path) of those inflicted with Thy wrath, nor (of those) gone astray."
+
+<hr>
+
+  </div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+ শুরু করছি আল্লাহর নামে যিনি পরম করুণাময়, অতি দয়ালু।   
+<hr>
+
+যাবতীয় প্রশংসা আল্লাহ তাআলা আলার যিনি সকল সৃষ্টি জগতের পালনকর্তা।
+
+<hr>
+
+যিনি নিতান্ত মেহেরবান ও দয়ালু।
+
+<hr>
+
+যিনি বিচার দিনের মালিক।
+
+
+
+<hr>
+
+আমরা একমাত্র তোমারই ইবাদত করি এবং শুধুমাত্র তোমারই সাহায্য প্রার্থনা করি।
+
+<hr>
+
+আমাদেরকে সরল পথ দেখাও,
+
+<hr>
+
+সে সমস্ত লোকের পথ, যাদেরকে তুমি নেয়ামত দান করেছ। তাদের পথ নয়, যাদের প্রতি তোমার গজব নাযিল হয়েছে এবং যারা পথভ্রষ্ট হয়েছে।
+
+<hr>
+
+  </div>
+</div>
+
+
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
